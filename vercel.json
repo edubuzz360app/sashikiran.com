@@ -1,0 +1,20 @@
+{
+  "headers": [
+    {
+      "source": "/llms.txt",
+      "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/sashverse.html", "destination": "/sashverse", "permanent": true },
+    { "source": "/human.html", "destination": "/", "permanent": true },
+    { "source": "/human", "destination": "/", "permanent": true },
+    { "source": "/index.html", "destination": "/", "permanent": false }
+  ]
+}

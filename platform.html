@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="/assets/fav-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Intelligence | Sashology Platform</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/platform.css">
+</head>
+<body>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="plat-sidebar">
+    <div class="sidebar-header">
+      <a href="/sashology.html" class="sidebar-logo" style="text-decoration: none; color: inherit;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        Sashology
+      </a>
+    </div>
+
+    <div class="sidebar-nav">
+      <div class="nav-group">
+        <div class="nav-group-title">Workspace</div>
+        <a class="nav-item">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          Dashboard
+        </a>
+        <a class="nav-item">
+          <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Projects
+        </a>
+      </div>
+
+      <div class="nav-group">
+        <div class="nav-group-title">The Engines</div>
+        <a class="nav-item active">
+          <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/><line x1="9" y1="21" x2="15" y2="21"/><line x1="10" y1="19" x2="14" y2="19"/></svg>
+          Product Intelligence
+        </a>
+        <a class="nav-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><circle cx="4" cy="19" r="3"/><circle cx="20" cy="19" r="3"/><line x1="12" y1="8" x2="4" y2="16"/><line x1="12" y1="8" x2="20" y2="16"/><line x1="4" y1="19" x2="20" y2="19"/></svg>
+          AI Agent
+        </a>
+        <a class="nav-item">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Validation
+        </a>
+        <a class="nav-item">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Simulation
+        </a>
+        <a class="nav-item">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          Execution
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= MAIN WRAPPER ================= -->
+  <main class="plat-main">
+    
+    <!-- HEADER -->
+    <header class="plat-header">
+      <div class="header-breadcrumbs">
+        <span class="breadcrumb-item">SashVerse Core</span>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">Product Intelligence Engine</span>
+      </div>
+      <div class="header-actions">
+        <button class="btn-primary">Export Systems</button>
+      </div>
+    </header>
+
+    <!-- WORKSPACE -->
+    <div class="workspace">
+      
+      <!-- LEFT PANE: GUIDED COLLABORATION CHAT -->
+      <section class="pane-chat">
+        <div class="chat-history">
+          
+          <!-- AI Intro Message -->
+          <div class="chat-msg msg-ai">
+            <div class="msg-avatar">
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7z"/></svg>
+            </div>
+            <div class="msg-content">
+              <div class="msg-bubble">
+                Welcome to the Product Intelligence Engine. I am your Product Strategist. Let's define the foundation of your new AI-native product.<br><br>What kind of system are we building today?
+              </div>
+              <!-- Smart Replies / Low Typing Interface -->
+              <div class="msg-choices">
+                <button class="choice-chip" data-reply="We are building an Autonomous Data Analysis Platform.">
+                  Autonomous Data Analysis Platform
+                  <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <button class="choice-chip" data-reply="We are building a Multi-Agent Collaborative IDE.">
+                  Multi-Agent Collaborative IDE
+                  <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+                <button class="choice-chip" data-reply="We are building an AI-Native Customer Success Suite.">
+                  AI-Native Customer Success Suite
+                  <svg viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Chat Input Field -->
+        <div class="chat-input-area">
+          <div class="input-wrapper">
+            <input type="text" class="chat-input" placeholder="Type a custom response..." id="chat-input-field">
+            <button class="input-submit" id="chat-submit-btn">
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT PANE: DOCUMENT VIEWER -->
+      <section class="pane-doc">
+        
+        <div class="doc-tabs" id="doc-tabs-container">
+          <div class="doc-tab active" data-target="prd">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            prd.md
+          </div>
+          <div class="doc-tab" data-target="ux">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            ux-flows.md
+          </div>
+          <div class="doc-tab" data-target="arch">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            architecture.md
+          </div>
+        </div>
+
+        <div class="doc-content markdown-body" id="doc-content-area">
+          <!-- Initial Empty State -->
+          <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: var(--plat-text-muted); opacity: 0.5;">
+            <svg viewBox="0 0 24 24" style="width: 48px; height: 48px; stroke: currentColor; fill: none; margin-bottom: 1rem; stroke-width: 1;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <p>System awaiting initialization sequence...</p>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <script type="module" src="/platform.js"></script>
+</body>
+</html>
