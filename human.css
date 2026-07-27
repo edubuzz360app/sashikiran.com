@@ -2534,7 +2534,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 55vh 0 2rem;
+    padding: 50vh 0 3rem;
     gap: 1rem;
   }
 
@@ -2553,7 +2553,7 @@ a {
 
   .mode-switch-wrap--hero {
     position: static;
-    margin: 0.25rem 0 0;
+    margin: 0.65rem 0 0;
     transform: none;
     animation: none;
     opacity: 1;
@@ -2571,6 +2571,7 @@ a {
 
   .sash-bot {
     width: 3.75rem;
+    bottom: 0;
   }
 
   .sash-bot__btn {
