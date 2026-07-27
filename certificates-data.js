@@ -12,7 +12,7 @@
 export const AWARD_FILES = [
   'UdIQV32F6VGqc2GG31b0ac8Nk0g.avif',
   'SuVfvuXRmIThyZYoS8kG9Y8iL1w.webp',
-  'dGIXvgkk94L4aleE3cVHiCGoI.avif',
+  'encore.jpeg',
   // Add next award filename here ↓
 ];
 

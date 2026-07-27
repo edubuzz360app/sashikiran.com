@@ -117,6 +117,49 @@ async function initCertifications() {
 
 initCertifications();
 
+function initTestimonialCarousel() {
+  const root = document.querySelector('.testimonial-marquee');
+  const viewport = root?.querySelector('.testimonial-marquee__viewport');
+  const prev = root?.querySelector('.testimonial-marquee__btn--prev');
+  const next = root?.querySelector('.testimonial-marquee__btn--next');
+  if (!viewport || !prev || !next) return;
+
+  const step = () => {
+    const card = viewport.querySelector('li');
+    if (card) return card.offsetWidth + 18;
+    return Math.max(280, Math.round(viewport.clientWidth * 0.78));
+  };
+
+  const scroll = (dir) => viewport.scrollBy({ left: dir * step(), behavior: 'smooth' });
+
+  prev.addEventListener('click', () => scroll(-1));
+  next.addEventListener('click', () => scroll(1));
+
+  const trigger = root?.querySelector('.testimonial-marquee__nav-trigger');
+  const popover = root?.querySelector('.testimonial-marquee__nav-popover');
+  if (trigger && popover) {
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      popover.classList.toggle('is-open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!popover.contains(e.target) && e.target !== trigger) {
+        popover.classList.remove('is-open');
+      }
+    });
+    popover.querySelector('.testimonial-marquee__popover-btn--prev')?.addEventListener('click', () => {
+      scroll(-1);
+      popover.classList.remove('is-open');
+    });
+    popover.querySelector('.testimonial-marquee__popover-btn--next')?.addEventListener('click', () => {
+      scroll(1);
+      popover.classList.remove('is-open');
+    });
+  }
+}
+
+initTestimonialCarousel();
+
 // Navbar scroll + mobile menu
 const nav = document.getElementById('human-nav');
 const menuBtn = document.querySelector('.human-nav__menu');
@@ -141,6 +184,32 @@ if (menuBtn && navLinks) {
       menuBtn.classList.remove('is-open');
       navLinks.classList.remove('is-open');
     });
+  });
+}
+
+// SashBot mobile popup
+const sashBotAvatar = document.querySelector('.sash-bot__avatar-link');
+const sashBotPopup = document.querySelector('.sash-bot__popup');
+const sashBotClose = document.querySelector('.sash-bot__popup-close');
+
+if (sashBotAvatar && sashBotPopup) {
+  sashBotAvatar.addEventListener('click', (e) => {
+    if (window.innerWidth <= 480) {
+      e.preventDefault();
+      sashBotPopup.classList.add('is-open');
+    }
+  });
+
+  const closePopup = () => sashBotPopup.classList.remove('is-open');
+
+  sashBotClose?.addEventListener('click', closePopup);
+
+  sashBotPopup.addEventListener('click', (e) => {
+    if (e.target === sashBotPopup) closePopup();
+  });
+
+  sashBotPopup.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closePopup);
   });
 }
 
