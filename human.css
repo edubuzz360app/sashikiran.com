@@ -1321,6 +1321,10 @@ a {
   display: none;
 }
 
+.cert-carousel__viewport.is-auto-scrolling {
+  scroll-snap-type: none;
+}
+
 .cert-carousel__track {
   list-style: none;
   display: flex;
@@ -1633,6 +1637,10 @@ a {
 
 .testimonial-marquee__viewport::-webkit-scrollbar {
   display: none;
+}
+
+.testimonial-marquee__viewport.is-auto-scrolling {
+  scroll-snap-type: none;
 }
 
 .testimonial-marquee__track {
@@ -1977,6 +1985,128 @@ a {
 }
 
 /* Contact */
+/* ── Voice of Sash ── */
+
+.voice-track {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.voice-scroll {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  flex: 1;
+}
+
+.voice-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.voice-scroll__inner {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+.voice-card {
+  scroll-snap-align: start;
+  width: min(18rem, 72vw);
+  border-radius: 1rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 1px solid var(--h-line);
+  transition: transform 0.3s var(--h-ease), box-shadow 0.3s ease;
+}
+
+.voice-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(11, 18, 32, 0.1);
+}
+
+.voice-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.voice-btn {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--h-line);
+  background: var(--h-surface);
+  color: var(--h-ink);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  line-height: 1;
+}
+
+.voice-btn:hover {
+  background: var(--h-bg-tint);
+  border-color: var(--h-muted);
+}
+
+.voice-btn--prev::before { content: '‹'; }
+.voice-btn--next::before { content: '›'; }
+
+.voice-cta {
+  text-align: center;
+}
+
+.voice-cta .btn {
+  display: inline-flex;
+}
+
+@media (max-width: 640px) {
+  .voice-track {
+    gap: 0.5rem;
+  }
+
+  .voice-scroll {
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .voice-scroll__inner {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 2rem;
+    width: auto;
+  }
+
+  .voice-scroll__inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .voice-card {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: calc(100vw - 6rem);
+    max-width: 22rem;
+  }
+
+  .voice-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ── Contact Section ── */
+
 .human-section--contact {
   background: var(--h-ink);
   color: #E5E7EB;

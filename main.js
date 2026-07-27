@@ -9,6 +9,126 @@ initModeNavLinks();
 settleModeTransition();
 
 // ==========================================
+// SashBot fly-in entrance
+// ==========================================
+(function initSashBotAI() {
+  const sashBot = document.querySelector('.sash-bot--ai');
+  if (!sashBot) return;
+
+  const flyer = sashBot.querySelector('.sash-bot__flyer');
+  const avatar = sashBot.querySelector('.sash-bot__avatar');
+  const buttons = sashBot.querySelectorAll('.sash-bot__btn');
+  if (!flyer || !avatar) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    flyer.style.display = 'none';
+    avatar.style.display = 'block';
+    gsap.set(buttons, { opacity: 1, y: 0 });
+    return;
+  }
+
+  gsap.set(sashBot, { opacity: 1 });
+
+  const vw = window.innerWidth;
+  const rect = sashBot.getBoundingClientRect();
+  const flyerW = flyer.offsetWidth || rect.width;
+  const flyerH = flyer.offsetHeight || rect.height;
+
+  gsap.set(flyer, {
+    x: vw - rect.left - flyerW,
+    y: -(rect.top + flyerH + 40),
+    scale: 1.5,
+    opacity: 1,
+    rotation: 10,
+    scaleX: -1,
+  });
+
+  gsap.set(avatar, { display: 'none' });
+  gsap.set(buttons, { opacity: 0, y: 8 });
+
+  const tl = gsap.timeline({
+    defaults: { ease: 'power2.out' },
+    delay: 0.4,
+  });
+
+  tl.to(flyer, {
+    x: 0,
+    y: 0,
+    scale: 1,
+    rotation: 0,
+    duration: 1.8,
+    ease: 'power2.inOut',
+    onComplete: () => {
+      flyer.style.display = 'none';
+      avatar.style.display = 'block';
+
+      gsap.fromTo(avatar,
+        { scale: 0.6, opacity: 0, rotation: -6 },
+        {
+          scale: 1,
+          opacity: 1,
+          rotation: 0,
+          duration: 0.5,
+          ease: 'back.out(2.5)',
+          onComplete: () => {
+            gsap.to(avatar, {
+              keyframes: [
+                { y: -3, duration: 0.15, ease: 'power2.out' },
+                { y: 0, duration: 0.2, ease: 'bounce.out' },
+              ],
+              onComplete: () => {
+                gsap.to(avatar, {
+                  y: -4,
+                  duration: 2.8,
+                  ease: 'sine.inOut',
+                  yoyo: true,
+                  repeat: -1,
+                });
+              },
+            });
+          },
+        }
+      );
+    },
+  });
+
+  tl.to(buttons, {
+    opacity: 1,
+    y: 0,
+    duration: 0.35,
+    stagger: 0.12,
+    ease: 'power2.out',
+  }, '-=0.15');
+})();
+
+// SashBot AI mobile popup
+(function initSashBotAIPopup() {
+  const avatarLink = document.querySelector('.sash-bot--ai .sash-bot__avatar-link');
+  const popup = document.querySelector('.sash-bot__popup--ai');
+  const closeBtn = popup?.querySelector('.sash-bot__popup-close');
+  if (!avatarLink || !popup) return;
+
+  avatarLink.addEventListener('click', (e) => {
+    if (window.innerWidth <= 480) {
+      e.preventDefault();
+      popup.classList.add('is-open');
+    }
+  });
+
+  const closePopup = () => popup.classList.remove('is-open');
+
+  closeBtn?.addEventListener('click', closePopup);
+
+  popup.addEventListener('click', (e) => {
+    if (e.target === popup) closePopup();
+  });
+
+  popup.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closePopup);
+  });
+})();
+
+// ==========================================
 // 1. NAVBAR
 // ==========================================
 const nav = document.getElementById('site-nav');

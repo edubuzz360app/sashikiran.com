@@ -41,6 +41,8 @@ export default defineConfig({
         humanRedirect: resolve(__dirname, 'human.html'),
         sashology: resolve(__dirname, 'sashology.html'),
         platform: resolve(__dirname, 'platform.html'),
+        blog: resolve(__dirname, 'blog.html'),
+        'blog/figma-2026-updates': resolve(__dirname, 'blog/figma-2026-updates.html'),
       },
     },
   },

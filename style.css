@@ -1370,3 +1370,248 @@ a {
   box-shadow: 0 0 15px var(--primary-glow);
   background: rgba(225, 6, 0, 0.25) !important;
 }
+
+/* ── SashBot AI (dark mode) ── */
+.sash-bot--ai {
+  position: fixed;
+  right: clamp(0.75rem, 2.5vw, 1.5rem);
+  bottom: clamp(0.75rem, 2.5vw, 1.5rem);
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(5.25rem, 18vw);
+  pointer-events: none;
+}
+
+.sash-bot--ai .sash-bot__flyer {
+  position: absolute;
+  bottom: calc(100% - 0.15rem);
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform-origin: center center;
+  z-index: 1;
+}
+
+.sash-bot--ai .sash-bot__avatar-link {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.sash-bot--ai .sash-bot__avatar-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -0.15rem;
+  filter: drop-shadow(0 8px 20px rgba(225, 6, 0, 0.3));
+}
+
+.sash-bot--ai .sash-bot__avatar-link .sash-bot__avatar {
+  display: none;
+}
+
+.sash-bot--ai .sash-bot__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+  pointer-events: auto;
+}
+
+.sash-bot--ai .sash-bot__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.45rem 0.5rem;
+  border-radius: 999px;
+  font-family: var(--font-display), 'Outfit', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-align: center;
+  line-height: 1.15;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  pointer-events: auto;
+}
+
+.sash-bot--ai .sash-bot__btn--secondary {
+  border: 1.5px solid rgba(15, 23, 42, 0.22);
+  background: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.sash-bot--ai .sash-bot__btn--secondary:hover {
+  border-color: #111827;
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+.sash-bot--ai .sash-bot__btn--primary {
+  border: 1.5px solid var(--primary, #e10600);
+  background: var(--primary, #e10600);
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(225, 6, 0, 0.28);
+}
+
+.sash-bot--ai .sash-bot__btn--primary:hover {
+  background: #c40500;
+  border-color: #c40500;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(225, 6, 0, 0.34);
+}
+
+@media (max-width: 560px) {
+  .sash-bot--ai {
+    width: min(4.5rem, 20vw);
+    right: 0.65rem;
+    bottom: 0.65rem;
+  }
+
+  .sash-bot--ai .sash-bot__btn {
+    font-size: 0.58rem;
+    padding: 0.42rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sash-bot--ai .sash-bot__actions {
+    display: none;
+  }
+
+  .sash-bot--ai {
+    width: 4rem;
+  }
+
+  .sash-bot__popup--ai {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.75rem;
+    padding: 2.5rem 1.5rem;
+    background: rgba(5, 7, 15, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .sash-bot__popup--ai.is-open {
+    display: flex;
+    animation: sashBotFadeIn 0.25s ease;
+  }
+
+  @keyframes sashBotFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: none;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    z-index: 1;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-close::before {
+    content: '×';
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-avatar {
+    display: block;
+    width: 4.5rem;
+    height: auto;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-title {
+    margin: 0;
+    font-family: var(--font-display), 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-links .sash-bot__btn {
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-links .sash-bot__btn--secondary {
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-links .sash-bot__btn--secondary:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-links .sash-bot__btn--primary {
+    border: 1.5px solid var(--primary, #e10600);
+    background: var(--primary, #e10600);
+    color: #fff;
+  }
+
+  .sash-bot__popup--ai .sash-bot__popup-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .sash-bot__popup--ai .sash-bot__contact-link {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.82rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: var(--font-display), 'Outfit', sans-serif;
+  }
+
+  .sash-bot__popup--ai .sash-bot__contact-link:hover {
+    color: #fff;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sash-bot--ai .sash-bot__flyer {
+    display: none;
+  }
+  .sash-bot--ai .sash-bot__avatar-link .sash-bot__avatar {
+    display: block;
+  }
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/assets/fav-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0B1220" />
+  <meta name="color-scheme" content="light" />
+  <meta name="description" content="Blog by S S Sashikiran — thoughts on product design, AI, design systems, and the 7S Design Framework." />
+  <title>Blog | S S Sashikiran</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Outfit:wght@500;600;700&family=Syne:wght@500;600;700;800&display=swap"
+    rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Inter:wght@400;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Outfit:wght@500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="/mode-switch.css">
+  <link rel="stylesheet" href="/human.css">
+  <link rel="stylesheet" href="/blog.css">
+</head>
+
+<body data-site-mode="human">
+
+  <nav id="human-nav" class="human-nav">
+    <a href="/" class="human-nav__logo" aria-label="Sashikiran Home">
+      <img src="/assets/logo_black.png" alt="Sashikiran" />
+    </a>
+    <div class="human-nav__links">
+      <a href="/#about">About</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#framework">7S Framework</a>
+      <a href="/#gallery">Gallery</a>
+      <a href="/blog.html" class="human-nav__cta">Blog</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://www.linkedin.com/in/sashikiran/" target="_blank" rel="noopener noreferrer"
+        class="human-nav__cta">LinkedIn</a>
+      <a href="https://drive.google.com/file/d/1maRMyZWpptWlbsCaZaBEOyIcwILyRc4c/view?usp=drive_link"
+        target="_blank" rel="noopener noreferrer" class="human-nav__cta human-nav__cta--primary">Resume</a>
+    </div>
+    <button class="human-nav__menu" aria-label="Toggle Navigation" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main class="blog-page">
+    <header class="blog-page__header">
+      <h1 class="blog-page__title">Blog</h1>
+      <p class="blog-page__subtitle">Thoughts on product design, AI, design systems, and the 7S Design Framework.</p>
+    </header>
+
+    <div class="blog-list">
+
+      <article class="blog-card">
+        <div class="blog-card__meta">
+          <time datetime="2026-07-20">Jul 20, 2026</time>
+          <span class="blog-card__tag">Design</span>
+        </div>
+        <a href="/blog/figma-2026-updates.html" class="blog-card__title">
+          Figma 2026: What the Latest Updates Mean for Designers
+        </a>
+        <p class="blog-card__excerpt">
+          From AI-powered design tokens to real-time 3D prototyping — Figma's 2026 roadmap brings the biggest shift since multiplayer. Here is everything you need to know.
+        </p>
+        <a href="/blog/figma-2026-updates.html" class="blog-card__link">
+          Read more &rarr;
+        </a>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card__meta">
+          <time datetime="2026-07-10">Jul 10, 2026</time>
+          <span class="blog-card__tag">Framework</span>
+        </div>
+        <a href="/blog/figma-2026-updates.html" class="blog-card__title">
+          Why the 7S Design Framework Still Works in the Age of AI
+        </a>
+        <p class="blog-card__excerpt">
+          Study, Specify, Strategize, Scope, Solve, Stylize, Scan — how the 7S framework adapts to AI-assisted workflows without losing the human craft.
+        </p>
+        <a href="/blog/figma-2026-updates.html" class="blog-card__link">
+          Read more &rarr;
+        </a>
+      </article>
+
+      <article class="blog-card">
+        <div class="blog-card__meta">
+          <time datetime="2026-06-28">Jun 28, 2026</time>
+          <span class="blog-card__tag">Career</span>
+        </div>
+        <a href="/blog/figma-2026-updates.html" class="blog-card__title">
+          From UX Designer to AI Product Manager: A Career Pivot Guide
+        </a>
+        <p class="blog-card__excerpt">
+          The skills that transfer, the gaps to fill, and the mindset shift required to move from design into AI product management.
+        </p>
+        <a href="/blog/figma-2026-updates.html" class="blog-card__link">
+          Read more &rarr;
+        </a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="human-footer">
+    <p>&copy; <span id="year"></span> S S Sashikiran · Chennai, India</p>
+  </footer>
+
+  <script type="module">
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+    // mobile menu
+    const menuBtn = document.querySelector('.human-nav__menu');
+    const navLinks = document.querySelector('.human-nav__links');
+    if (menuBtn && navLinks) {
+      menuBtn.addEventListener('click', () => {
+        menuBtn.classList.toggle('is-open');
+        navLinks.classList.toggle('is-open');
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuBtn.classList.remove('is-open');
+          navLinks.classList.remove('is-open');
+        });
+      });
+    }
+
+    // scroll effect
+    const nav = document.getElementById('human-nav');
+    window.addEventListener('scroll', () => {
+      nav?.classList.toggle('is-scrolled', window.scrollY > 40);
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
