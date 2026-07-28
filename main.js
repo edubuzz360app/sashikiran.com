@@ -1,6 +1,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { initAllModeSwitches, initModeNavLinks, settleModeTransition } from './mode-switch.js';
+import { inject } from '@vercel/analytics';
+inject();
 
 gsap.registerPlugin(ScrollTrigger);
 
