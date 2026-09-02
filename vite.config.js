@@ -1,21 +1,21 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
-/** Map /sashverse (with or without slash) to the AI Mode folder entry in dev + preview */
-function sashverseDevRewrite() {
+/** Map folder-based routes (with or without trailing slash) to their index.html in dev + preview */
+function folderRewrite(route, indexPath) {
   const rewrite = (req, _res, next) => {
     const url = req.url || '';
     const path = url.split('?')[0];
     const qs = url.includes('?') ? url.slice(url.indexOf('?')) : '';
 
-    if (path === '/sashverse' || path === '/sashverse/') {
-      req.url = `/sashverse/index.html${qs}`;
+    if (path === `/${route}` || path === `/${route}/`) {
+      req.url = `/${indexPath}${qs}`;
     }
     next();
   };
 
   return {
-    name: 'sashverse-dev-rewrite',
+    name: `${route}-dev-rewrite`,
     configureServer(server) {
       server.middlewares.use(rewrite);
     },
@@ -28,7 +28,7 @@ function sashverseDevRewrite() {
 export default defineConfig({
   base: '/',
   appType: 'mpa',
-  plugins: [sashverseDevRewrite()],
+  plugins: [folderRewrite('sashverse', 'sashverse/index.html'), folderRewrite('wedding', 'wedding/index.html')],
   css: {
     postcss: {},
   },
@@ -43,6 +43,7 @@ export default defineConfig({
         platform: resolve(__dirname, 'platform.html'),
         blog: resolve(__dirname, 'blog.html'),
         'blog/figma-2026-updates': resolve(__dirname, 'blog/figma-2026-updates.html'),
+        wedding: resolve(__dirname, 'wedding/index.html'),
       },
     },
   },

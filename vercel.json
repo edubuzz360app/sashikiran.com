@@ -29,6 +29,7 @@
   ],
   "redirects": [
     { "source": "/sashverse.html", "destination": "/sashverse", "permanent": true },
+    { "source": "/wedding.html", "destination": "/wedding", "permanent": true },
     { "source": "/human.html", "destination": "/", "permanent": true },
     { "source": "/human", "destination": "/", "permanent": true },
     { "source": "/index.html", "destination": "/", "permanent": false }

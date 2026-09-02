@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" href="/assets/fav-icon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#4A050E" />
+  <meta name="color-scheme" content="dark" />
+  <title>Sashikiran Weds Hari Lakshmi | Wedding Celebration</title>
+  <meta name="description"
+    content="Together with their families, Sashikiran and Hari Lakshmi invite you to celebrate their Engagement on Nov 28 &amp; Wedding on Nov 29, 2026 at AMG Paradise, Madurai." />
+  <meta name="author" content="Sashikiran" />
+  <link rel="canonical" href="https://sashikiran.com/wedding/" />
+
+  <meta property="og:site_name" content="Sashikiran Weds Hari Lakshmi" />
+  <meta property="og:title" content="Sashikiran Weds Hari Lakshmi | Wedding Celebration" />
+  <meta property="og:description" content="Engagement Nov 28 &amp; Wedding Nov 29, 2026 at AMG Paradise, Madurai." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sashikiran.com/wedding/" />
+  <meta property="og:image" content="https://sashikiran.com/assets/thumbnail.png" />
+
+  <!-- Google Fonts for Luxury Festive Indian Wedding -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="/wedding/wedding.css" />
+</head>
+
+<body>
+  <!-- Floating Confetti & Petals Canvas -->
+  <canvas id="canvas-particles"></canvas>
+
+  <div class="wedding-app">
+
+    <!-- ═══════════════ FOLD 1: HERO & QUICK ANCHORS ═══════════════ -->
+    <section class="fold-hero" id="fold-hero">
+      
+      <!-- Hero Couple Background Photo & Atmospheric Overlays -->
+      <div class="hero__bg-photo-wrap" aria-hidden="true">
+        <img src="/assets/cover.png" alt="Sashikiran &amp; Hari Lakshmi" class="hero__bg-photo" fetchpriority="high" />
+        <div class="hero__bg-overlay"></div>
+      </div>
+      
+      <!-- Festive Arch Floral Top Layer -->
+      <div class="hero__festive-arch" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" fill="none" style="width: 100%; height: 100%;">
+          <path d="M0,0 L1200,0 L1200,40 Q900,100 600,40 Q300,100 0,40 Z" fill="url(#archGrad)" opacity="0.65"/>
+          <path d="M0,0 L1200,0 L1200,20 Q900,70 600,20 Q300,70 0,20 Z" fill="url(#archGradGold)" opacity="0.4"/>
+          <defs>
+            <linearGradient id="archGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#8B1E2B"/>
+              <stop offset="50%" stop-color="#D4AF37"/>
+              <stop offset="100%" stop-color="#8B1E2B"/>
+            </linearGradient>
+            <linearGradient id="archGradGold" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#D4AF37"/>
+              <stop offset="50%" stop-color="#FFFDF9"/>
+              <stop offset="100%" stop-color="#D4AF37"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- Background Animated Mandala -->
+      <div class="hero__mandala-bg" aria-hidden="true">
+        <svg viewBox="0 0 400 400" fill="none" stroke="#D4AF37" stroke-width="1.5">
+          <circle cx="200" cy="200" r="190" stroke-dasharray="4 6"/>
+          <circle cx="200" cy="200" r="150"/>
+          <circle cx="200" cy="200" r="110" stroke-dasharray="6 8"/>
+          <circle cx="200" cy="200" r="70"/>
+          <!-- Mandala Petals -->
+          <path d="M200 10 C220 70, 220 130, 200 190 C180 130, 180 70, 200 10 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M200 390 C220 330, 220 270, 200 210 C180 270, 180 330, 200 390 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M10 200 C70 220, 130 220, 190 200 C130 180, 70 180, 10 200 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M390 200 C330 220, 270 220, 210 200 C270 180, 330 180, 390 200 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M65 65 C115 105, 155 145, 195 195 C145 155, 105 115, 65 65 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M335 335 C285 295, 245 255, 205 205 C255 245, 295 285, 335 335 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M65 335 C105 285, 145 245, 195 205 C155 255, 115 295, 65 335 Z" fill="rgba(212,175,55,0.06)"/>
+          <path d="M335 65 C295 115, 255 155, 205 195 C245 145, 285 105, 335 65 Z" fill="rgba(212,175,55,0.06)"/>
+        </svg>
+      </div>
+
+      <!-- Hanging Brass Diyas (Lamps) -->
+      <div class="hero__lamp hero__lamp--left" aria-hidden="true">
+        <svg width="40" height="180" viewBox="0 0 40 180" fill="none">
+          <line x1="20" y1="0" x2="20" y2="135" stroke="#D4AF37" stroke-width="1.8" stroke-dasharray="2 3"/>
+          <circle cx="20" cy="140" r="10" fill="#9B7817" stroke="#D4AF37" stroke-width="1.5"/>
+          <path d="M8 152 Q20 170 32 152 Q20 158 8 152 Z" fill="#D4AF37"/>
+          <path d="M14 150 Q20 138 26 150 Z" fill="#F4A261"/>
+        </svg>
+        <div class="hero__lamp-glow"></div>
+      </div>
+
+      <div class="hero__lamp hero__lamp--right" aria-hidden="true">
+        <svg width="40" height="180" viewBox="0 0 40 180" fill="none">
+          <line x1="20" y1="0" x2="20" y2="135" stroke="#D4AF37" stroke-width="1.8" stroke-dasharray="2 3"/>
+          <circle cx="20" cy="140" r="10" fill="#9B7817" stroke="#D4AF37" stroke-width="1.5"/>
+          <path d="M8 152 Q20 170 32 152 Q20 158 8 152 Z" fill="#D4AF37"/>
+          <path d="M14 150 Q20 138 26 150 Z" fill="#F4A261"/>
+        </svg>
+        <div class="hero__lamp-glow"></div>
+      </div>
+
+      <!-- Central Headline & Ceremony Details -->
+      <div class="hero__content">
+        <span class="hero__shloka">Together with their families</span>
+
+        <div class="hero__couple-frame">
+          <h1 class="hero__names">
+            Sashikiran <span class="hero__weds-badge">weds</span> Hari Lakshmi
+          </h1>
+        </div>
+
+        <div class="hero__date-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+            <line x1="16" x2="16" y1="2" y2="6" />
+            <line x1="8" x2="8" y1="2" y2="6" />
+            <line x1="3" x2="21" y1="10" y2="10" />
+          </svg>
+          <span>November 28 &amp; 29, 2026 • Madurai, Tamil Nadu</span>
+        </div>
+
+        <!-- Live Countdown Timer -->
+        <div class="countdown-box" id="countdown-wrapper">
+          <div class="countdown__item">
+            <span class="countdown__value" id="cd-days">00</span>
+            <span class="countdown__lbl">Days</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__value" id="cd-hours">00</span>
+            <span class="countdown__lbl">Hours</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__value" id="cd-mins">00</span>
+            <span class="countdown__lbl">Mins</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__value" id="cd-secs">00</span>
+            <span class="countdown__lbl">Secs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Quick-Action Glassmorphic Anchor Cards -->
+      <div class="hero__anchors">
+        <!-- Card 1: Venue -->
+        <a href="#fold-venue" class="anchor-card" id="anchor-venue">
+          <div class="anchor-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+          </div>
+          <strong class="anchor-card__title">Venue &amp; Hall</strong>
+          <span class="anchor-card__sub">AMG Paradise, Madurai</span>
+        </a>
+
+        <!-- Card 2: Schedule -->
+        <a href="#fold-schedule" class="anchor-card" id="anchor-schedule">
+          <div class="anchor-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <strong class="anchor-card__title">Event Schedule</strong>
+          <span class="anchor-card__sub">Engagement &amp; Muhurtham</span>
+        </a>
+
+        <!-- Card 3: Transportation -->
+        <a href="#fold-venue" class="anchor-card" id="anchor-travel">
+          <div class="anchor-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 11.2 2 11.6 2 12v4c0 .6.4 1 1 1h2" />
+              <circle cx="7" cy="17" r="2" />
+              <path d="M9 17h6" />
+              <circle cx="17" cy="17" r="2" />
+            </svg>
+          </div>
+          <strong class="anchor-card__title">Transportation</strong>
+          <span class="anchor-card__sub">Directions &amp; Parking Tips</span>
+        </a>
+
+        <!-- Card 4: Add to Calendar -->
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sashikiran+Weds+Hari+Lakshmi&dates=20261128T123000Z/20261129T073000Z&details=Wedding+Celebration+of+Sashikiran+%26+Hari+Lakshmi+at+AMG+Paradise%2C+Madurai&location=AMG+Paradise%2C+Madurai"
+          target="_blank" rel="noopener noreferrer" class="anchor-card" id="anchor-calendar">
+          <div class="anchor-card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 2v4" />
+              <path d="M16 2v4" />
+              <rect width="18" height="18" x="3" y="4" rx="2" />
+              <path d="M3 10h18" />
+              <path d="M10 16h4" />
+              <path d="M12 14v4" />
+            </svg>
+          </div>
+          <strong class="anchor-card__title">Add to Calendar</strong>
+          <span class="anchor-card__sub">One-Click Google / .ics</span>
+        </a>
+      </div>
+
+    </section>
+
+    <!-- ═══════════════ FOLD 2: VENUE & DIRECTIONS ═══════════════ -->
+    <section class="fold-venue" id="fold-venue">
+      <div class="section-header">
+        <span class="section-tag">Destination &amp; Location</span>
+        <h2 class="section-title">Venue &amp; Directions</h2>
+        <div class="section-divider">✦</div>
+      </div>
+
+      <div class="venue__grid">
+        <!-- Venue Card -->
+        <div class="venue__info-card">
+          <div>
+            <span class="venue__hall-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18" />
+                <path d="M5 21V7l8-4v18" />
+                <path d="M19 21V11l-6-4" />
+              </svg>
+              Grand Marriage Hall
+            </span>
+            <h3 class="venue__hall-name">AMG Paradise</h3>
+          </div>
+
+          <div class="venue__address-box">
+            <p><strong>Address:</strong> Plot No. 1, Division, near Iyer Bungalow, Gomathiyamman Nagar, Panangadi, Madurai, Tamil Nadu 625017</p>
+          </div>
+
+          <div class="venue__travel-highlights">
+            <!-- Parking -->
+            <div class="travel-item">
+              <div class="travel-item__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="3" rx="2" />
+                  <path d="M9 17V7h4a3 3 0 0 1 0 6H9" />
+                </svg>
+              </div>
+              <div class="travel-item__text">
+                <h4>Valet &amp; Spacious Parking</h4>
+                <p>Ample parking space available inside the hall premises for 150+ cars and two-wheelers.</p>
+              </div>
+            </div>
+
+            <!-- Landmark -->
+            <div class="travel-item">
+              <div class="travel-item__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+              </div>
+              <div class="travel-item__text">
+                <h4>Prominent Landmark</h4>
+                <p>Located right near Iyer Bungalow junction on the Panangadi Main Road.</p>
+              </div>
+            </div>
+
+            <!-- Cab & Transit -->
+            <div class="travel-item">
+              <div class="travel-item__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C2.1 11.2 2 11.6 2 12v4c0 .6.4 1 1 1h2" />
+                  <circle cx="7" cy="17" r="2" />
+                  <path d="M9 17h6" />
+                  <circle cx="17" cy="17" r="2" />
+                </svg>
+              </div>
+              <div class="travel-item__text">
+                <h4>Cab &amp; Auto Drop-off</h4>
+                <p>Ola, Uber, and local Madurai autos have direct drop-off right at the porch gate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Card -->
+        <div class="venue__map-container">
+          <div class="venue__map-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3929.4144416047535!2d78.14088927582236!3d9.982597473336496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c5c36394be41%3A0x6bfe76e9389f41b3!2sAMG%20PARADISE!5e0!3m2!1sen!2sin!4v1741000000000!5m2!1sen!2sin"
+              title="AMG Paradise Location Map" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+          <a href="https://maps.google.com/?q=AMG+PARADISE+Iyer+Bungalow+Madurai" target="_blank"
+            rel="noopener noreferrer" class="btn-directions">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 11 22 2 13 21 11 13 3 11" />
+            </svg>
+            Get Directions on Google Maps
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FOLD 3: EVENT SCHEDULE & CELEBRATION TIMELINE ═══════════════ -->
+    <section class="fold-schedule" id="fold-schedule">
+      <div class="section-header">
+        <span class="section-tag">Festivities &amp; Rituals</span>
+        <h2 class="section-title">Celebration Timeline</h2>
+        <div class="section-divider">✦</div>
+      </div>
+
+      <div class="events-grid">
+        <!-- Event Card A: Engagement & Reception -->
+        <div class="event-luxury-card">
+          <div class="event-card__banner event-card__banner--engagement">
+            <div class="event-card__banner-overlay"></div>
+            <span class="event-card__pill">Day 1 • Evening Celebration</span>
+            <h3 class="event-card__banner-title">Engagement &amp; Reception</h3>
+          </div>
+
+          <div class="event-card__body">
+            <div class="event-card__timing">
+              <div class="timing-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                </svg>
+                <strong>Saturday, November 28, 2026</strong>
+              </div>
+              <div class="timing-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>6:00 PM — 10:00 PM IST</span>
+              </div>
+            </div>
+
+            <p class="event-card__description">
+              Join us for a magical evening adorned with fairy lights, auspicious ring exchange, live celebratory music, and an exquisite South Indian grand banquet dinner.
+            </p>
+
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sashikiran+%26+Hari+Lakshmi+Engagement+%26+Reception&dates=20261128T123000Z/20261128T163000Z&details=Engagement+and+Reception+Celebration+at+AMG+Paradise%2C+Madurai&location=AMG+Paradise%2C+Madurai"
+              target="_blank" rel="noopener noreferrer" class="event-card__btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+              </svg>
+              Add Engagement to Calendar
+            </a>
+          </div>
+        </div>
+
+        <!-- Event Card B: Muhurtham / Wedding Ceremony -->
+        <div class="event-luxury-card">
+          <div class="event-card__banner event-card__banner--wedding">
+            <div class="event-card__banner-overlay"></div>
+            <span class="event-card__pill">Day 2 • Auspicious Muhurtham</span>
+            <h3 class="event-card__banner-title">Wedding Ceremony (Muhurtham)</h3>
+          </div>
+
+          <div class="event-card__body">
+            <div class="event-card__timing">
+              <div class="timing-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                </svg>
+                <strong>Sunday, November 29, 2026</strong>
+              </div>
+              <div class="timing-row">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+                <span>10:00 AM — 1:00 PM IST</span>
+              </div>
+            </div>
+
+            <p class="event-card__description">
+              The sacred wedding vows and Mangalasutra thalibandhana rituals amid fragrant jasmine and marigold garlands, followed by traditional wedding feast (Kalyana Virundhu).
+            </p>
+
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Sashikiran+%26+Hari+Lakshmi+Wedding+Ceremony+(Muhurtham)&dates=20261129T043000Z/20261129T073000Z&details=Auspicious+Muhurtham+and+Wedding+Ceremony+at+AMG+Paradise%2C+Madurai&location=AMG+Paradise%2C+Madurai"
+              target="_blank" rel="noopener noreferrer" class="event-card__btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2v4" />
+                <path d="M16 2v4" />
+                <rect width="18" height="18" x="3" y="4" rx="2" />
+                <path d="M3 10h18" />
+              </svg>
+              Add Muhurtham to Calendar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FOOTER ═══════════════ -->
+    <footer class="wedding-footer">
+      <h3 class="footer__sign-off">We can't wait to celebrate with you!</h3>
+      <p class="footer__subtext">With blessings &amp; joyous hearts</p>
+      <p class="footer__family">The Families of Sashikiran &amp; Hari Lakshmi</p>
+      <a href="/" class="footer__home-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        Return to sashikiran.com
+      </a>
+    </footer>
+
+  </div>
+
+  <script type="module" src="/wedding/wedding.js"></script>
+</body>
+
+</html>
