@@ -54,7 +54,7 @@ a {
 /* ---------- Nav (light hero - ink by default) ---------- */
 .human-nav {
   position: fixed;
-  inset: 0 0 auto 0;
+  inset: var(--announcement-h, 0px) 0 auto 0;
   z-index: 100;
   height: var(--h-nav-h);
   padding: 0 clamp(1.25rem, 4vw, 3rem);
