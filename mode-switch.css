@@ -197,7 +197,7 @@
 }
 
 :root {
-  --announcement-h: 40px;
+  --announcement-h: 36px;
 }
 
 .wedding-announcement-strip {
@@ -238,7 +238,7 @@
 /* AI Mode typography */
 body[data-site-mode="ai"] .wedding-announcement-strip {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.675rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -247,7 +247,7 @@ body[data-site-mode="ai"] .wedding-announcement-strip {
 /* Human Mode typography */
 body[data-site-mode="human"] .wedding-announcement-strip {
   font-family: 'Syne', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.725rem;
   font-weight: 700;
   letter-spacing: 0.02em;
 }
@@ -258,7 +258,7 @@ body[data-site-mode="human"] .wedding-announcement-strip {
   }
   body[data-site-mode="ai"] .wedding-announcement-strip,
   body[data-site-mode="human"] .wedding-announcement-strip {
-    font-size: 0.65rem;
+    font-size: 0.55rem;
   }
 }
 

@@ -19,6 +19,7 @@ export const AWARD_FILES = [
 /** Course filenames pinned to the front of the courses carousel (in this order). */
 export const COURSE_PIN_FIRST = [
   'Screenshot 2026-07-26 001130.png',
+  '@claude-arch.png',
 ];
 
 const AWARD_SET = new Set(AWARD_FILES);
