@@ -62,6 +62,9 @@
     </svg>
   </a>
 
+  <!-- Audio Element (Native Autoplay) -->
+  <audio id="bg-audio" src="/wedding/BGM%20website.mp3" autoplay loop preload="auto"></audio>
+
   <div class="wedding-app">
 
     <!-- ═══════════════ FOLD 1: EDITORIAL GRAND HERO ═══════════════ -->
@@ -461,13 +464,13 @@
         <!-- Left Pavilion: Sashikiran -->
         <div class="pavilion pavilion--left" id="pavilion-groom">
           <div class="pavilion__portrait">
-            <span class="pavilion__portrait-initial">S</span>
+            <img src="/wedding/groom.png" alt="Groom" class="pavilion__portrait-img" />
           </div>
-          <h3 class="pavilion__name">Sashikiran</h3>
+          <h3 class="pavilion__name">S S Sashikiran</h3>
           <span class="pavilion__role">The Groom</span>
           <p class="pavilion__message">
             A passionate technologist with a heart full of dreams. As he begins this beautiful journey, he looks forward
-            to building a lifetime of love, laughter, and shared adventures.
+            to building a lifetime of love, laughter, and shared adventures. <a href="https://www.sashikiran.com" target="_blank" style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px;">Read more on sashikiran.com</a>
           </p>
         </div>
 
@@ -479,9 +482,9 @@
         <!-- Right Pavilion: Hari Lakshmi -->
         <div class="pavilion pavilion--right" id="pavilion-bride">
           <div class="pavilion__portrait">
-            <span class="pavilion__portrait-initial">H</span>
+            <img src="/wedding/bride.png" alt="Bride" class="pavilion__portrait-img" />
           </div>
-          <h3 class="pavilion__name">Hari Lakshmi</h3>
+          <h3 class="pavilion__name">Dr. Hari Lakshmi</h3>
           <span class="pavilion__role">The Bride</span>
           <p class="pavilion__message">
             A radiant soul whose warmth and grace light up every room. With boundless kindness and a gentle spirit, she
@@ -507,8 +510,6 @@
             <div class="event-card__banner-overlay"></div>
             <span class="event-card__pill">Day 1 • Evening Celebration</span>
             <h3 class="event-card__banner-title">Engagement &amp; Reception</h3>
-          </div>
-          <div class="event-card__body">
             <div class="event-card__timing">
               <div class="timing-row">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -529,10 +530,16 @@
                 <span>6:00 PM — 10:00 PM IST</span>
               </div>
             </div>
-            <p class="event-card__desc">
-              Join us for a magical evening — exchange of rings, musical evening &amp; a grand celebration feast under
-              the stars at AMG Paradise.
-            </p>
+          </div>
+          <div class="event-card__body">
+            <ul class="event-card__agenda">
+              <li><span>6:00 PM – 7:00 PM</span> <span>Welcome Drinks &amp; Snacks</span></li>
+              <li><span>7:00 PM – 7:15 PM</span> <span>Dance Performance by Family Kids</span></li>
+              <li><span>7:15 PM – 8:00 PM</span> <span>Engagement &amp; Ring Exchange</span></li>
+              <li><span>8:00 PM – 9:00 PM</span> <span>Photos &amp; Blessings from Guests</span></li>
+              <li><span>9:00 PM – 9:15 PM</span> <span>Video Presentation</span></li>
+              <li><span>9:15 PM – 10:00 PM</span> <span>Photos &amp; Blessings from Guests</span></li>
+            </ul>
             <button class="event-card__btn" data-event="engagement" onclick="addToCalendar('engagement')">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -552,8 +559,6 @@
             <div class="event-card__banner-overlay"></div>
             <span class="event-card__pill">Day 2 • Auspicious Muhurtham</span>
             <h3 class="event-card__banner-title">Marriage Ceremony</h3>
-          </div>
-          <div class="event-card__body">
             <div class="event-card__timing">
               <div class="timing-row">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -574,10 +579,18 @@
                 <span>10:00 AM — 1:00 PM IST</span>
               </div>
             </div>
-            <p class="event-card__desc">
-              The auspicious Muhurtham — garland exchange, sacred wedding vows, and traditional lunch feast (Kalyana
-              Virundhu) celebrating this divine union.
-            </p>
+          </div>
+          <div class="event-card__body">
+            <ul class="event-card__agenda">
+              <li><span>8:30 AM – 10:00 AM</span> <span>Traditional Breakfast</span></li>
+              <li><span>10:00 AM – 10:15 AM</span> <span>Groom's Grand Entry</span></li>
+              <li><span>10:15 AM – 10:30 AM</span> <span>Bride's Majestic Entry</span></li>
+              <li><span>10:30 AM – 10:45 AM</span> <span>Auspicious Muhurtham</span></li>
+              <li><span>10:45 AM – 11:00 AM</span> <span>Elders &amp; Family Blessings</span></li>
+              <li><span>11:00 AM – 11:15 AM</span> <span>Special Video Presentation</span></li>
+              <li><span>11:15 AM – 1:00 PM</span> <span>Photos &amp; Blessings from Guests</span></li>
+              <li><span>12:30 PM onwards</span> <span>Grand Kalyana Virundhu (Lunch)</span></li>
+            </ul>
             <button class="event-card__btn" data-event="marriage" onclick="addToCalendar('marriage')">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -666,7 +679,7 @@
               </div>
               <div class="travel-item__text">
                 <h4>Prominent Landmark</h4>
-                <p>Located near Iyer Bungalow on the Panangadi Main Road.</p>
+                <p>Located 2.5 kms near Iyer Bungalow on the Panangadi Main Road.</p>
               </div>
             </div>
 
@@ -699,7 +712,8 @@
               </div>
               <div class="travel-item__text">
                 <h4>Seamless Cab &amp; Bus Drop-off</h4>
-                <p>Ola, Uber, local autos and outstation buses have direct drop-off at the porch gate.</p>
+                <p><strong>Cab / Auto (Ola, Uber, Red Taxi, Auto):</strong> Set the destination to AMG Paradise, Panangadi or Gomathiyamman Nagar, Panangadi.</p>
+                <p style="margin-top: 8px;"><strong>By Bus:</strong> If you do not get a direct bus dropping right in front of Panangadi Check Post, simply board any frequent bus bound for Iyer Bungalow. From the Iyer Bungalow junction, auto-rickshaws and share-autos toward Panangadi/Kulamangalam take under 5 minutes.</p>
               </div>
             </div>
           </div>
@@ -735,14 +749,10 @@
       </p>
 
       <nav class="footer__quick-links" aria-label="Footer navigation">
-        <a href="#fold-hero" class="footer__link">Top</a>
-        <span class="footer__link-sep">•</span>
-        <a href="#schedule" class="footer__link">Schedule</a>
-        <span class="footer__link-sep">•</span>
-        <a href="#venue-map" class="footer__link">Venue</a>
+        <a href="https://www.sashikiran.com" target="_blank" class="footer__link">Visit Sashikiran.com</a>
       </nav>
 
-      <p class="footer__copyright">Madurai 2026 • Crafted with love</p>
+      <p class="footer__copyright"><a href="https://www.sashikiran.com" style="color: inherit; text-decoration: none;">www.sashikiran.com</a> &nbsp;&bull;&nbsp; Designed by the Groom - Sashikiran.</p>
     </footer>
 
   </div>

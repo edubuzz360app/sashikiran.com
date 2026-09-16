@@ -637,9 +637,13 @@
     if (audioInitialized) return;
     audioInitialized = true;
 
-    audio = new Audio();
-    audio.src = '/wedding/celebration.mp3';
-    audio.loop = true;
+    // Use the native HTML audio element for better autoplay compatibility
+    audio = document.getElementById('bg-audio');
+    if (!audio) {
+      audio = new Audio();
+      audio.src = '/wedding/BGM%20website.mp3';
+      audio.loop = true;
+    }
     audio.volume = 0.45;
 
     audio.addEventListener('play', () => {
@@ -653,11 +657,14 @@
     });
 
     audio.addEventListener('error', () => {
-      console.info('Audio primary source failed, trying relative path...');
-      if (audio.src && audio.src.indexOf('/wedding/') !== -1) {
-        audio.src = 'celebration.mp3';
-      }
+      console.info('Audio primary source failed');
     });
+    
+    // If it started natively before JS hooked in
+    if (!audio.paused) {
+      audioPlaying = true;
+      if (audioToggle) audioToggle.classList.add('is-playing');
+    }
   }
 
   function startDivineMusic() {
@@ -673,22 +680,35 @@
     });
   }
 
-  // Attempt autoplay immediately on page load
+  // Attempt autoplay 1 second after page load
   if (document.readyState === 'complete') {
-    startDivineMusic();
+    setTimeout(startDivineMusic, 1000);
   } else {
-    window.addEventListener('load', startDivineMusic, { once: true });
+    window.addEventListener('load', () => setTimeout(startDivineMusic, 1000), { once: true });
   }
 
   // Instant trigger on any first user gesture (touch, scroll, click, keydown)
   const userGestureEvents = ['click', 'touchstart', 'scroll', 'keydown', 'pointerdown'];
-  function onFirstUserInteraction() {
-    startDivineMusic();
-    userGestureEvents.forEach(evt => window.removeEventListener(evt, onFirstUserInteraction));
-    userGestureEvents.forEach(evt => document.removeEventListener(evt, onFirstUserInteraction));
+  function onFirstUserInteraction(e) {
+    if (e && e.target && e.target.closest && e.target.closest('#audio-toggle')) return;
+    
+    initAudio();
+    if (!audio || audioPlaying) return;
+    
+    audio.play().then(() => {
+      audioPlaying = true;
+      if (audioToggle) audioToggle.classList.add('is-playing');
+      
+      // Successfully started, remove listeners
+      userGestureEvents.forEach(evt => window.removeEventListener(evt, onFirstUserInteraction, { capture: true }));
+      userGestureEvents.forEach(evt => document.removeEventListener(evt, onFirstUserInteraction, { capture: true }));
+    }).catch(() => {
+      // Browser autoplay policy restricted - wait for next valid interaction
+    });
   }
-  userGestureEvents.forEach(evt => window.addEventListener(evt, onFirstUserInteraction, { once: true, passive: true }));
-  userGestureEvents.forEach(evt => document.addEventListener(evt, onFirstUserInteraction, { once: true, passive: true }));
+  
+  userGestureEvents.forEach(evt => window.addEventListener(evt, onFirstUserInteraction, { capture: true, passive: true }));
+  userGestureEvents.forEach(evt => document.addEventListener(evt, onFirstUserInteraction, { capture: true, passive: true }));
 
   if (audioToggle) {
     audioToggle.addEventListener('click', (e) => {
