@@ -2115,6 +2115,7 @@ a { color: inherit; }
   .event-card__banner {
     min-height: 160px;
     height: auto;
+    padding-top: 64px;
   }
 
   .event-card__body {
